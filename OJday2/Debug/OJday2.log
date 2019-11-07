@@ -1,0 +1,5 @@
+﻿  源.cpp
+  源1.cpp
+  正在生成代码...
+D:\Git代码\cpp.practice2\OJday2\源.cpp(6,9): warning C4101: “m”: 未引用的局部变量
+  OJday2.vcxproj -> D:\Git代码\cpp.practice2\OJday2\Debug\OJday2.exe
