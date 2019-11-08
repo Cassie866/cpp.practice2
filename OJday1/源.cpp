@@ -19,7 +19,7 @@ int main()
 {
 	int n;
 	vector<int> v;
-	int max = 0;
+	long long max = 0;
 	while (cin >> n)
 	{
 		v.resize(3 * n);
@@ -33,6 +33,6 @@ int main()
 	{
 		max += v[i];
 	}
-	printf("%d", max);
+	cout << max;
 	return 0;
 }
