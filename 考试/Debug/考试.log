@@ -1,0 +1,4 @@
+﻿  源.cpp
+D:\Git代码\cpp.practice2\考试\源.cpp(9,21): warning C4018: “<”: 有符号/无符号不匹配
+D:\Git代码\cpp.practice2\考试\源.cpp(11,22): warning C4018: “<”: 有符号/无符号不匹配
+  考试.vcxproj -> D:\Git代码\cpp.practice2\考试\Debug\考试.exe
