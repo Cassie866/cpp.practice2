@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29424.173
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "OJday6", "OJday6.vcxproj", "{86590BCA-96B8-409A-A5DF-A7333FAA0742}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{86590BCA-96B8-409A-A5DF-A7333FAA0742}.Debug|x64.ActiveCfg = Debug|x64
+		{86590BCA-96B8-409A-A5DF-A7333FAA0742}.Debug|x64.Build.0 = Debug|x64
+		{86590BCA-96B8-409A-A5DF-A7333FAA0742}.Debug|x86.ActiveCfg = Debug|Win32
+		{86590BCA-96B8-409A-A5DF-A7333FAA0742}.Debug|x86.Build.0 = Debug|Win32
+		{86590BCA-96B8-409A-A5DF-A7333FAA0742}.Release|x64.ActiveCfg = Release|x64
+		{86590BCA-96B8-409A-A5DF-A7333FAA0742}.Release|x64.Build.0 = Release|x64
+		{86590BCA-96B8-409A-A5DF-A7333FAA0742}.Release|x86.ActiveCfg = Release|Win32
+		{86590BCA-96B8-409A-A5DF-A7333FAA0742}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {16DB131E-4868-49DD-987F-1D0924D0F308}
+	EndGlobalSection
+EndGlobal
