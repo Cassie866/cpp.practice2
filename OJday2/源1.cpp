@@ -1,5 +1,4 @@
-
-
+/*µ¹ÖÃ×Ö·û´®*/
 #include <iostream>
 #include <string>
 using namespace std;
@@ -17,7 +16,6 @@ int main()
 
 
 #include <vector>
-
 int main()
 {    
 	string s;  
