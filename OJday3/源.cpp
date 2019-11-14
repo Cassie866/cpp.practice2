@@ -1,3 +1,7 @@
+/*
+数组中出现次数超过一半的数字
+*/
+
 #include <iostream>
 #include <vector>
 #include <unordered_map>
