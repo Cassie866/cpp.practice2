@@ -2,31 +2,36 @@
 #include <iostream>
 #include <string>
 using namespace std;
+
 int main()
 {
 	string s1, s2;
-	while (getline(cin, s1))
+	while (cin >> s1 >> s2)
 	{
-		getline(cin, s2);
 		int i = 0, j = 0;
-		while (i < s1.size() && j < s2.size())
+		int k = i - 1, flag = 1;
+		for (; j < s2.size(); j++)
 		{
-			if (s1[i] == s2[j] || s1[i] == '?')
+			if (s2[j] == s1[i] || s1[i] == '?')
 			{
 				i++;
-				j++;
 			}
 			else if (s1[i] == '*')
 			{
 				i++;
-				j++;
-				while (s1[i] != s2[j])
-					j++;
+			}
+			else if (k >= 0 && s1[k] == '*')
+			{
+				continue;
 			}
 			else
+			{
 				cout << "false" << endl;
+				flag = 0;
+				break;
+			}
 		}
-		if (i == s1.size() - 1 && j == s2.size() - 1)
+		if (flag == 1)
 			cout << "true" << endl;
 	}
 	return 0;
