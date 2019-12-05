@@ -25,5 +25,29 @@ FOREIGN KEY (Sno) REFERENCES Student(Sno),/*表级完整性约束条件，Sno �
 FOREIGN KEY (Cno) REFERENCES Course(Cno)/*表级完整性约束条件，Cno 是外码，被参照表是Course*/
 );
 
+create table Student
+(
+Sno char(9) primary key, 
+Sname char(20) unique, 
+Ssex char(2),
+Sage smallint,
+Sdept char(20)
+);
+create table Course
+( 
+Cno char(4)primary key, 
+Cname char(40) unique NOT NULL,  
+Cpno char(4),
+Ccredit smallint,
+);  
+create table SC 
+(
+Sno char(9),
+Cno char(4),
+Grade smallint,
+primary key (Sno,Cno),
+foreign KEY (Sno) references Student(Sno),
+foreign KEY (Cno) references Course(Cno)
+);
  
 
