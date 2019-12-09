@@ -1,3 +1,7 @@
+/*ÄêÖÕ½±*/
+#include <iostream>
+#include <vector>
+using namespace std;
 class Bonus
 {
 public:
