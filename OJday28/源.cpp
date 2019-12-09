@@ -9,15 +9,21 @@ public:
 	 *  len：arr的长度
 	 *  将arr调整成奇数位上都是奇数或者偶数位上都是偶数
 	 */
-	void oddInOddEvenInEven(vector<int>& arr, int len)
+	void oddInOddEvenInEven(vector<int>& arr, int len) 
 	{
-		for (int i = 0; i < arr.size(); ++i)
+		int i = 0, j = 1;
+		while (i < len && j < len)
 		{
-			if (arr[i] % 2 != 0)
+			if (arr[len - 1] % 2 == 0)
 			{
-				arr.push_back(arr[i]);
+				swap(arr[len - 1], arr[i]);
+				i += 2;
+			}
+			else
+			{
+				swap(arr[len - 1], arr[j]);
+				j += 2;
 			}
 		}
-
 	}
 };
