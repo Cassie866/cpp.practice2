@@ -4,12 +4,12 @@ mysql  -u root -p
 如果没有写 -h 127.0.0.1 默认是连接本地
 如果没有写 -P 3306 默认是连接3306端口号
 
+
 创建数据库
 create  database helloworld;
 系统使用默认字符集：utf8，校验规则是：utf8_ general_ ci
 
 create database db2 charset=utf8;
-
 create database db3 charset=utf8 collate utf8_general_ci;
 
 CREATE DATABASE [IF NOT EXISTS] db_name [create_specification [, create_specification] ...]
@@ -43,13 +43,11 @@ DROP DATABASE [IF EXISTS] db_ name;
 
 
 备份
-# mysqldump -P3306 -u root -p 密码 -B 数据库名 > 数据库备份存储的文件路径
+# mysqldump -P 3306 -u root -p 密码 -B 数据库名 > 数据库备份存储的文件路径
 # mysqldump -u root -p -B 数据库名 > 数据库备份存储的文件路径
 # mysqldump -u root -p -B 数据库名 表名1 表名2  > 数据库备份存储的文件路径
 # mysqldump -u root -p -B 数据库名1  数据库名2 ... > 数据库存放路径
-如果备份一个数据库时，没有带上-B参数， 
-在恢复数据库时，需要先创建空数据库，然后使用数据库，
-再使 用source来还原。 
+如果备份一个数据库时，没有带上-B参数， 在恢复数据库时，需要先创建空数据库，然后使用数据库，再使用source来还原。 
 
 还原
 mysql> source D:/mysql-5.7.22/mytest.sql;

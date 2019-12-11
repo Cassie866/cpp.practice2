@@ -1,17 +1,18 @@
 declare @sums int=0
-declare @i int=1
+declare @i int=0
+print '偶数为：'
 while @i<=10
   begin
+  set @i=@i+1
   if (@i%2)=0
     begin
     set @sums=@sums+@i
 	print @i
-	set @i=@i+1
-	continue
     end 
   else   
-    set @i=@i+1
+    continue
   end
+print '偶数和为：'
 print @sums
 
 
@@ -28,11 +29,15 @@ select @I,@sums
 
 declare @temp1 char(20),@temp2 int;
 select @temp1,@temp2;
-
 set @temp1 = 'caomingge';
-select @temp2 = 20170901;
+set @temp2 = @temp1;
 select @temp1,@temp2;
 
+declare @temp1 int,@temp2 int;
+select @temp1,@temp2;
+set @temp1 = 2017110;
+set @temp2 = @temp1;
+select @temp1,@temp2;
 
 
 
