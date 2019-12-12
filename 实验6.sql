@@ -51,3 +51,4 @@ foreign KEY (Cno) references Course(Cno)
 );
  
 
+
