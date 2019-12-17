@@ -1,2 +1,3 @@
-﻿  源.cpp
+﻿  源2.cpp
+D:\Git代码\cpp.practice2\OJday14\源2.cpp(15,7): warning C4102: “case3”: 未引用的标签
   OJday14.vcxproj -> D:\Git代码\cpp.practice2\OJday14\Debug\OJday14.exe

@@ -1,6 +1,5 @@
 /*авдЫДќзг*/
 
-
 #include <iostream>
 #include <vector>
 using namespace std;
@@ -24,7 +23,6 @@ int mut(vector<int> v)
 	return mut;
 }
 
-
 int main()
 {
 	int n = 0, kinds = 0;
@@ -47,10 +45,6 @@ int main()
 	cout << kinds;
 	return 0;
 }
-
-
-
-
 
 #include <iostream>
 #include <vector>
