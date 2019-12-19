@@ -1,85 +1,58 @@
-/*幸运袋子*/
+/*幸运的袋子*/
 
 #include <iostream>
-#include <vector>
+#include <cstdlib>
 using namespace std;
-int sum(vector<int> v)
+
+int n;
+int nums[1000];
+
+int cmp(const void* a, const void* b) 
 {
-	int sum = 0;
-	for (int i = 0; i < v.size(); i++)
-	{
-		sum += v[i];	
-	}
-	return sum;
+	return *(int*)a - *(int*)b;
 }
 
-int mut(vector<int> v)
+// 思路：DFS生成全组合，同时注意剪枝、避免重复组合
+int findall(int nums[], int index, long sum, long multi) 
 {
-	int mut = 0;
-	for (int i = 0; i < v.size(); i++)
+	int count = 0;
+	for (int i = index; i < n; i++) 
 	{
-		mut *= v[i];
-	}
-	return mut;
-}
-
-int main()
-{
-	int n = 0, kinds = 0;
-	cin >> n;
-	vector<int> v(n);
-	for (int i = 0; i < n; i++)
-	{
-		cin >> v[i];
-	}
-	for (int i = 0; i < n; i++)
-	{
-		int temp = v[i];
-		v[i] = 1;
-		if (sum(v) - 1 > mutilation(v))
+		sum += nums[i];
+		multi *= nums[i];
+		if (sum > multi)
 		{
-			kinds++;
+			count += 1 + findall(nums, i + 1, sum, multi);
 		}
-		v[i] = temp;
+		else if (nums[i] == 1)
+		{
+			count += findall(nums, i + 1, sum, multi);
+		}
+		else
+		{
+			break;
+		}
+		sum -= nums[i];
+		multi /= nums[i];
+		// 跳过相等的元素，避免重复组合
+		while (i < n - 1 && nums[i] == nums[i + 1])
+		{
+			i++;
+		}
 	}
-	cout << kinds;
-	return 0;
+	return count;
 }
 
-#include <iostream>
-#include <vector>
-using namespace std;
-int sum(vector<int> v)
+int main(int argc, char* argv[])
 {
-	int sum = 0;
-	for (int i = 0; i < v.size(); i++)
+	while (cin >> n) 
 	{
-		sum += v[i];
+		for (int i = 0; i < n; i++)
+		{
+			cin >> nums[i];
+		}
+		qsort(nums, n, sizeof(int), cmp);
+		cout << findall(nums, 0, 0, 1) << endl;
 	}
-	return sum;
-}
-
-int mut(vector<int> v)
-{
-	int mut = 0;
-	for (int i = 0; i < v.size(); i++)
-	{
-		mut *= v[i];
-	}
-	return mut;
-}
-
-int main()
-{
-	int n = 0, kinds = 0;
-	cin >> n;
-	vector<int> v(n);
-	for (int i = 0; i < n; i++)
-	{
-		cin >> v[i];
-	}
-
-
-	cout << kinds;
 	return 0;
 }

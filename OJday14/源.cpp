@@ -1,6 +1,7 @@
 /*计算日期是一年中的第几天*/
 #include <iostream>
 using namespace std;
+
 int getDays(int year, int month)
 {
 	int days[12] = { 31,28,31,30,31,30,31,31,30,31,30,31 };
